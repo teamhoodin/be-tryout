@@ -11,6 +11,6 @@ class UserController extends Controller
 {
     public function user(User $user)
     {
-        dd($user);
+        return view('welcome', compact('user'));
     }
 }
