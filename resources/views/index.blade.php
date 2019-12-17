@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            
+            {{ $user->name }}
         </div>
     </body>
 </html>
