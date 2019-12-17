@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use App\User;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -23,9 +24,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
 
         parent::boot();
+
+        $this->bindModels();
     }
 
     /**
@@ -40,6 +42,19 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoutes();
 
         //
+    }
+    
+    protected function bindModels()
+    {
+                Route::bind('user', function ($value) { 
+
+            $user = User::find($value);
+
+            if($user) {
+                return $user;
+            }
+            abort(404);
+        });
     }
 
     /**
