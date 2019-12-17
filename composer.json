@@ -53,6 +53,7 @@
         ],
         "post-install-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"file_exists('database/hoodin.sqlite') || file_put_contents('database/hoodin.sqlite', '');\"",
             "@php artisan key:generate --ansi"
         ]
     }
