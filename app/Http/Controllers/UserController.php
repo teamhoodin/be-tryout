@@ -9,6 +9,7 @@ use App\User;
 
 class UserController extends Controller
 {
+
     public function user(User $user)
     {
         return view('index', compact('user'));
