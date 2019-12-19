@@ -11,9 +11,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @foreach($users as $user)
-                <?php dump($user) ?>
-            @endforeach
+             
         </div>
     </body>
 </html>

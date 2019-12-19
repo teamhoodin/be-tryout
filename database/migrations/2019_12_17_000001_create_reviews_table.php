@@ -17,7 +17,7 @@ class CreateReviewsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('text');
-            $table->date('rating');
+            $table->integer('rating');
             $table->integer('user_id');
             $table->integer('game_id');
         });
