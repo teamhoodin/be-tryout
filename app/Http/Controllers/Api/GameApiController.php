@@ -9,6 +9,10 @@ class GameApiController extends Controller
 {
     public function index()
     {
-        return response()->json(Game::all(), 200);
+        $query = Game::query();
+
+        $games = $query->get();
+
+        return response()->json($games, 200);
     }
 }

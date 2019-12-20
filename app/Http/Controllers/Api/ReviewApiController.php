@@ -9,6 +9,10 @@ class ReviewApiController extends Controller
 {
     public function index()
     {
-        return response()->json(Review::all(), 200);
+        $query = Review::query();
+
+        $reviews = $query->get();
+
+        return response()->json($reviews, 200);
     }
 }

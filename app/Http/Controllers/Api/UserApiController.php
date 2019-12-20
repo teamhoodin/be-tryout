@@ -9,6 +9,10 @@ class UserApiController extends Controller
 {
     public function index()
     {
-        return response()->json(User::all(), 200);
+        $query = User::query();
+
+        $users = $query->get();
+
+        return response()->json($users, 200);
     }
 }
