@@ -9,8 +9,8 @@
 
 -   Clone the repository
 -   Inside the project root, run `composer install`
+-   The database can be seeded (and later reseeded) by running `php artisan migrate:fresh --seed`.
 -   You can now run the application on a local PHP server by running `php artisan serve` in the project root.
--   The database can be seeded by running `php artisan migrate:fresh --seed`.
 
 ## The application
 
