@@ -30,6 +30,14 @@ The endpoints can be accessed here:
 
 Your task is to enable for additional ways to access the data.
 
+Examples of what could be added:
+
+-   Use of query strings to add limit and offset to the calls.
+-   Use of query strings to filter responses.
+-   Addition of endpoints for creating/updating/deleting records in the database.
+-   Authentication and other security concerns.
+-   Anything else you find missing.
+
 ## Tips
 
 -   The included database is a SQLite database. [DB Browser for SQLite](https://sqlitebrowser.org/dl/) is a useful app for looking inside the database.
