@@ -15,8 +15,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
-    protected $namespaceApi = 'App\Http\Controllers\Api';
+    protected $namespace = '';
+    protected $namespaceApi = '';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -43,7 +43,7 @@ class RouteServiceProvider extends ServiceProvider
 
         //
     }
-    
+
     protected function bindModels()
     {
         Route::bind('user', function ($value) {

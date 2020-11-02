@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UserApiController;
+use App\Http\Controllers\Api\GameApiController;
+use App\Http\Controllers\Api\ReviewApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/users', 'UserApiController@index');
-Route::get('/games', 'GameApiController@index');
-Route::get('/reviews', 'ReviewApiController@index');
+Route::get('/users', UserApiController::class . '@index');
+Route::get('/games', GameApiController::class . '@index');
+Route::get('/reviews', ReviewApiController::class . '@index');
